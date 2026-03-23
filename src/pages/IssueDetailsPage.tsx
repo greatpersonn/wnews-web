@@ -85,7 +85,7 @@ export function IssueDetailsPage() {
 
           <div className={styles.info}>
             <span className={styles.category}>{issue.category}</span>
-            <span className={styles.number}>Issue #{issue.issueNumber}</span>
+            <span className={styles.number}>Випуск №{issue.issueNumber}</span>
 
             <h1 className={styles.title}>{issue.title}</h1>
             <p className={styles.description}>{issue.description}</p>

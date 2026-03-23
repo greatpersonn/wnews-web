@@ -124,11 +124,11 @@ export function CreateAdPage() {
               </FormField>
 
               <FormField
-                label="Slug"
+                label="Коротка назва"
                 hint="Генерується автоматично, але можна змінити вручну."
               >
                 <TextInput
-                  placeholder="slug-ogoloshennya"
+                  placeholder="Коротка назва оголошення"
                   value={form.slug}
                   onChange={(e: ChangeEvent<HTMLInputElement>) => {
                     setIsSlugEditedManually(true);

@@ -15,7 +15,7 @@ export function IssueCard({ issue }: IssueCardProps) {
         </div>
 
         <div className={styles.body}>
-          <span className={styles.number}>Issue #{issue.issueNumber}</span>
+          <span className={styles.number}>Випуск #{issue.issueNumber}</span>
           <h3 className={styles.title}>{issue.title}</h3>
           <p className={styles.description}>{issue.description}</p>
 

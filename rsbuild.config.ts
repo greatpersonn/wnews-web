@@ -39,6 +39,6 @@ export default defineConfig({
     }
   },
   output: {
-    assetPrefix: '/wnews/',
+    assetPrefix: '/wnews-web/',
   }
 });
