@@ -1,0 +1,33 @@
+.page {
+  padding-bottom: 0;
+}
+
+.ticker {
+  padding-top: 20px;
+}
+
+.newsSection {
+  padding: 8px 0 0;
+}
+
+.newsLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 24px;
+  align-items: start;
+}
+
+.mainColumn,
+.sideColumn {
+  min-width: 0;
+}
+
+.stateWrap {
+  padding: 40px 0 0;
+}
+
+@media (max-width: 1100px) {
+  .newsLayout {
+    grid-template-columns: 1fr;
+  }
+}

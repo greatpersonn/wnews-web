@@ -1,0 +1,27 @@
+.tag {
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid #2b313c;
+  border-radius: 999px;
+  background: #12161d;
+  color: #d7dee8;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.tag:hover {
+  transform: translateY(-1px);
+  border-color: #d9232d;
+}
+
+.active {
+  background: #d9232d;
+  border-color: #d9232d;
+  color: #ffffff;
+}

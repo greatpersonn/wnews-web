@@ -1,0 +1,91 @@
+.footer {
+  margin-top: 64px;
+  border-top: 1px solid #232933;
+  background:
+    linear-gradient(180deg, rgba(217, 35, 45, 0.05), transparent 32%),
+    #0b0d12;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 1fr;
+  gap: 28px;
+  padding: 42px 0 28px;
+}
+
+.brand {
+  max-width: 520px;
+}
+
+.logo {
+  margin: 0 0 14px;
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+}
+
+.weazel {
+  color: #ffffff;
+}
+
+.news {
+  color: #d9232d;
+}
+
+.description {
+  margin: 0;
+  color: #aab3c2;
+  line-height: 1.7;
+}
+
+.columnTitle {
+  margin: 0 0 14px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.links,
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link,
+.info span {
+  color: #aab3c2;
+  text-decoration: none;
+  line-height: 1.6;
+}
+
+.link:hover {
+  color: #ffffff;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0 28px;
+  border-top: 1px solid #232933;
+}
+
+.copy,
+.note {
+  margin: 0;
+  color: #7f8a9b;
+  font-size: 14px;
+}
+
+@media (max-width: 960px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

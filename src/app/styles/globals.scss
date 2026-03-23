@@ -1,0 +1,26 @@
+@use './reset';
+@use './variables' as *;
+
+:root {
+  font-family: Inter, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: $text;
+  background: $bg;
+}
+
+body {
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top, rgba(217, 35, 45, 0.12), transparent 28%),
+    $bg;
+  color: $text;
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}

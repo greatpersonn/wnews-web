@@ -1,0 +1,26 @@
+.page {
+  padding: 40px 0 64px;
+}
+
+.head {
+  margin-bottom: 22px;
+}
+
+.subtitle {
+  margin: -6px 0 0;
+  max-width: 760px;
+  color: #9ea8b8;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
