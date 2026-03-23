@@ -10,7 +10,7 @@ interface TopStoriesSidebarProps {
 
 export function TopStoriesSidebar({
   items,
-  title = 'Top Stories',
+  title = 'Топ публікації',
 }: TopStoriesSidebarProps) {
   return (
     <aside className={styles.sidebar}>

@@ -11,7 +11,7 @@ export function NewsSearch({ value, onChange }: NewsSearchProps) {
     <div className={styles.wrapper}>
       <Input
         type="text"
-        placeholder="Search news by title, excerpt, author..."
+        placeholder="Шукайте останні новини саме тут, напишіть щось..."
         value={value}
         onChange={(event) => onChange(event.target.value)}
       />

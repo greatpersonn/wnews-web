@@ -8,17 +8,17 @@ export function NotFoundPage() {
     <Container>
       <div className={styles.page}>
         <div className={styles.code}>404</div>
-        <h1 className={styles.title}>Page not found</h1>
+        <h1 className={styles.title}>Сторінку не знайдено</h1>
         <p className={styles.text}>
-          The page you are trying to access does not exist or has been moved.
+          Сторінка, яку ви шукаєте, не існує або була перенесена.
         </p>
 
         <div className={styles.actions}>
           <Button to={ROUTES.home} variant="primary">
-            Go home
+            На головну
           </Button>
           <Button to={ROUTES.news} variant="secondary">
-            Open news
+            До стрічки новин
           </Button>
         </div>
       </div>

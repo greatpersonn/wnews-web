@@ -11,6 +11,9 @@ import { LatestNewsSection } from '@/components/organisms/LatestNewsSection';
 import { TopStoriesSidebar } from '@/components/organisms/TopStoriesSidebar';
 import { ErrorState } from '@/widgets/states/ErrorState';
 import { LoadingState } from '@/widgets/states/LoadingState';
+import type { AdItem } from '@/entities/ad/model/types';
+import { AdsSidebar } from '@/components/organisms/AdsSidebar';
+import { getActiveAdsList } from '@/entities/ad/api/ads.service';
 import styles from './HomePage.module.scss';
 
 export function HomePage() {
@@ -18,14 +21,20 @@ export function HomePage() {
   const [issues, setIssues] = useState<NewspaperIssue[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
+  const [ads, setAds] = useState<AdItem[]>([]);
 
   const loadData = useCallback(async () => {
     try {
       setIsLoading(true);
       setIsError(false);
 
-      const [newsData, issuesData] = await Promise.all([getNewsList(), getIssuesList()]);
+      const [newsData, issuesData, adsData] = await Promise.all([
+        getNewsList(),
+        getIssuesList(),
+        getActiveAdsList(),
+      ]);
 
+      setAds(adsData);
       setNews(newsData);
       setIssues(issuesData);
     } catch (error) {
@@ -44,7 +53,7 @@ export function HomePage() {
     return (
       <Container>
         <div className={styles.stateWrap}>
-          <LoadingState label="Loading homepage..." />
+          <LoadingState label="Зачекайте, фарба в принтері закінчилась..." />
         </div>
       </Container>
     );
@@ -55,8 +64,8 @@ export function HomePage() {
       <Container>
         <div className={styles.stateWrap}>
           <ErrorState
-            title="Failed to load homepage"
-            text="We could not load the latest stories and issues."
+            title="Помилка завантаження головної сторінки"
+            text="Щось пішло не так. Останні новини поки що недоступні."
             onRetry={loadData}
           />
         </div>
@@ -68,14 +77,15 @@ export function HomePage() {
   const latestNews = news.slice(0, 4);
   const topStories = news.slice(0, 4);
   const latestIssues = issues.slice(0, 3);
+  const homepageAds = ads.slice(0, 2);
 
   if (!featured) {
     return (
       <Container>
         <div className={styles.stateWrap}>
           <ErrorState
-            title="No featured article"
-            text="There is no featured content available yet."
+            title="Стрічка новин пустує..."
+            text="Поки що немає контенту, який ми можем вам порекомендувати!"
           />
         </div>
       </Container>
@@ -101,6 +111,7 @@ export function HomePage() {
 
             <div className={styles.sideColumn}>
               <TopStoriesSidebar items={topStories} />
+              <AdsSidebar items={homepageAds} />
             </div>
           </div>
         </Container>

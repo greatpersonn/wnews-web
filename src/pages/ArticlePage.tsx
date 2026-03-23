@@ -55,7 +55,7 @@ export function ArticlePage() {
     return (
       <div className={styles.page}>
         <Container>
-          <LoadingState label="Loading article..." />
+          <LoadingState label="Підвантажуємо статті..." />
         </Container>
       </div>
     );
@@ -66,8 +66,8 @@ export function ArticlePage() {
       <div className={styles.page}>
         <Container>
           <ErrorState
-            title="Failed to load article"
-            text="The newsroom could not load this material."
+            title="Помилка завантаження статті"
+            text="Здається, сталася помилка при завантаженні статті. Будь ласка, спробуйте ще раз."
             onRetry={loadArticle}
           />
         </Container>
@@ -80,12 +80,12 @@ export function ArticlePage() {
       <div className={styles.page}>
         <Container>
           <div className={styles.notFound}>
-            <h1 className={styles.notFoundTitle}>Article not found</h1>
+            <h1 className={styles.notFoundTitle}>Матеріали статтей не знайдені</h1>
             <p className={styles.notFoundText}>
-              The material you are trying to open does not exist or has been removed.
+              Матеріал, який ви намагаєтесь відкрити, не існує або був видалений.
             </p>
             <Button to="/news" variant="primary">
-              Back to news
+              Повернутися до новин
             </Button>
           </div>
         </Container>
@@ -114,17 +114,10 @@ export function ArticlePage() {
 
           <div className={styles.contentWrap}>
             <div className={styles.content}>
-              <p>{article.content}</p>
-              <p>
-                Weazel News continues to expand its digital presence by combining fast
-                reporting with structured long-form content. The editorial team says this
-                direction will help readers stay informed while also improving the overall
-                reading experience.
-              </p>
-              <p>
-                Additional sections, interviews, issue-based publications, and interactive
-                materials are expected to become part of the platform in future updates.
-              </p>
+              <div
+                className="article-content"
+                dangerouslySetInnerHTML={{ __html: article.content }}
+              />
             </div>
           </div>
         </article>
@@ -132,7 +125,7 @@ export function ArticlePage() {
         {relatedArticles.length > 0 && (
           <section className={styles.related}>
             <div className={styles.relatedHead}>
-              <h2 className={styles.relatedTitle}>Related Articles</h2>
+              <h2 className={styles.relatedTitle}>Також читайте</h2>
             </div>
 
             <div className={styles.relatedGrid}>

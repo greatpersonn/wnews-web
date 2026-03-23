@@ -1,0 +1,41 @@
+.wrapper {
+  display: grid;
+  gap: 10px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.editor {
+  min-height: 240px;
+  padding: 14px 15px;
+  border: 1px solid #2f3743;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #151922 0%, #11161d 100%);
+  color: #f5f7fa;
+  outline: none;
+  line-height: 1.75;
+}
+
+.editor:focus {
+  border-color: #d9232d;
+  box-shadow: 0 0 0 4px rgba(217, 35, 45, 0.12);
+}
+
+.editor h2 {
+  margin: 18px 0 10px;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.editor p {
+  margin: 0 0 14px;
+}
+
+.editor ul,
+.editor ol {
+  padding-left: 24px;
+}

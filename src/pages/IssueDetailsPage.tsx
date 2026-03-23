@@ -39,7 +39,7 @@ export function IssueDetailsPage() {
     return (
       <div className={styles.page}>
         <Container>
-          <LoadingState label="Loading issue..." />
+          <LoadingState label="Завантажуємо випуск..." />
         </Container>
       </div>
     );
@@ -50,8 +50,8 @@ export function IssueDetailsPage() {
       <div className={styles.page}>
         <Container>
           <ErrorState
-            title="Failed to load issue"
-            text="The requested publication could not be loaded."
+            title="Не вдалося завантажити випуск"
+            text="Запитана публікація наразі недоступна."
             onRetry={loadIssue}
           />
         </Container>
@@ -64,11 +64,11 @@ export function IssueDetailsPage() {
       <div className={styles.page}>
         <Container>
           <div className={styles.notFound}>
-            <h1 className={styles.notFoundTitle}>Issue not found</h1>
+            <h1 className={styles.notFoundTitle}>Випуск не знайдений або видалений</h1>
             <p className={styles.notFoundText}>
-              The issue you are trying to open does not exist or is unavailable.
+              Цей випуск не знайдено або він наразі недоступний.
             </p>
-            <Button to="/issues">Back to issues</Button>
+            <Button to="/issues">Повернутись до всіх випусків</Button>
           </div>
         </Container>
       </div>
@@ -91,13 +91,13 @@ export function IssueDetailsPage() {
             <p className={styles.description}>{issue.description}</p>
 
             <div className={styles.meta}>
-              <span>Published: {formatDate(issue.publishedAt)}</span>
-              <span>Pages: {issue.pages.length}</span>
+              <span>Опублікований: {formatDate(issue.publishedAt)}</span>
+              <span>Сторінок: {issue.pages.length}</span>
             </div>
 
             <div className={styles.buttons}>
               <Button to="/issues" variant="secondary">
-                Back to issues
+                Повернутись до всіх випусків
               </Button>
             </div>
           </div>

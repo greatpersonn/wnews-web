@@ -25,7 +25,7 @@ export function HeroFeatured({ article }: HeroFeaturedProps) {
             </div>
 
             <Button to={`/news/${article.slug}`} variant="primary">
-              Read article
+              Дізнатись більше
             </Button>
           </div>
 

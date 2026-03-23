@@ -1,0 +1,30 @@
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.label {
+  color: #eef3fb;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.action {
+  color: #98a3b4;
+  font-size: 12px;
+}
+
+.hint {
+  margin: 0;
+  color: #8e99aa;
+  font-size: 13px;
+  line-height: 1.5;
+}

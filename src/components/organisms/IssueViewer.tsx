@@ -31,7 +31,7 @@ export function IssueViewer({ issue }: IssueViewerProps) {
     <div className={styles.viewer}>
       <div className={styles.topbar}>
         <div className={styles.pageInfo}>
-          <span className={styles.pageLabel}>Page</span>
+          <span className={styles.pageLabel}>Сторінка №</span>
           <span className={styles.pageCounter}>
             {activeIndex + 1} / {issue.pages.length}
           </span>
@@ -40,10 +40,10 @@ export function IssueViewer({ issue }: IssueViewerProps) {
 
         <div className={styles.actions}>
           <Button variant="ghost" onClick={handlePrev} disabled={!canGoPrev}>
-            Prev
+            Попередня
           </Button>
           <Button variant="primary" onClick={handleNext} disabled={!canGoNext}>
-            Next
+            Наступна
           </Button>
         </div>
       </div>

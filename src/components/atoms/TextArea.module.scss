@@ -1,0 +1,30 @@
+.textarea {
+  width: 100%;
+  min-height: 180px;
+  padding: 14px 15px;
+  border: 1px solid #2f3743;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #151922 0%, #11161d 100%);
+  color: #f5f7fa;
+  outline: none;
+  resize: vertical;
+  line-height: 1.65;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.textarea::placeholder {
+  color: #7e8898;
+}
+
+.textarea:hover {
+  border-color: #435063;
+}
+
+.textarea:focus {
+  border-color: #d9232d;
+  box-shadow: 0 0 0 4px rgba(217, 35, 45, 0.12);
+  background: #131922;
+}

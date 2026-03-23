@@ -4,7 +4,7 @@ interface LoadingStateProps {
   label?: string;
 }
 
-export function LoadingState({ label = 'Loading...' }: LoadingStateProps) {
+export function LoadingState({ label = 'Друкуємо газети...' }: LoadingStateProps) {
   return (
     <div className={styles.state}>
       <div className={styles.spinner} />

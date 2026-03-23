@@ -17,6 +17,12 @@
   align-items: start;
 }
 
+.sideColumn {
+  min-width: 0;
+  display: grid;
+  gap: 20px;
+}
+
 .mainColumn,
 .sideColumn {
   min-width: 0;

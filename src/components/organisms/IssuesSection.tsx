@@ -13,9 +13,9 @@ export function IssuesSection({ items }: IssuesSectionProps) {
     <section className={styles.section}>
       <Container>
         <div className={styles.head}>
-          <SectionTitle>Latest Issues</SectionTitle>
+          <SectionTitle>Останні випуски</SectionTitle>
           <p className={styles.subtitle}>
-            Newspaper editions, special reports, and visual publications from Weazel News.
+            Випуски газет, спеціальні звіти та візуальні публікації з Weazel News.
           </p>
         </div>
 

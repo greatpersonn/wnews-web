@@ -1,0 +1,22 @@
+.sidebar {
+  display: grid;
+  gap: 16px;
+}
+
+.head {
+  padding: 16px 18px;
+  border: 1px solid #2b313c;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(217, 35, 45, 0.06), transparent);
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.list {
+  display: grid;
+  gap: 14px;
+}

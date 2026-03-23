@@ -13,7 +13,7 @@ import { ErrorState } from '@/widgets/states/ErrorState';
 import { LoadingState } from '@/widgets/states/LoadingState';
 import styles from './NewsPage.module.scss';
 
-const ALL_CATEGORY = 'All';
+const ALL_CATEGORY = 'Всі';
 const INITIAL_VISIBLE_COUNT = 4;
 const LOAD_MORE_STEP = 4;
 
@@ -95,10 +95,9 @@ export function NewsPage() {
     <div className={styles.page}>
       <Container>
         <div className={styles.head}>
-          <SectionTitle>All News</SectionTitle>
+          <SectionTitle>Усі публікації</SectionTitle>
           <SectionSubtitle>
-            Browse the latest stories, breaking reports, interviews, and city updates from
-            Weazel News.
+            Останні новини, гарячі зведення, ексклюзивні інтерв'ю та міські апдейти в одному місці.
           </SectionSubtitle>
         </div>
 
@@ -113,11 +112,11 @@ export function NewsPage() {
         </div>
 
         {isLoading ? (
-          <LoadingState label="Loading news..." />
+          <LoadingState label="Завантажуємо новини..." />
         ) : isError ? (
           <ErrorState
-            title="Failed to load news"
-            text="We could not retrieve articles from the newsroom."
+            title="Помилка завантаження"
+            text="Нажаль, зараз ми не можемо отримати доступ до стрічки новин."
             onRetry={loadNews}
           />
         ) : visibleNews.length > 0 ? (
@@ -131,16 +130,16 @@ export function NewsPage() {
             {hasMore && (
               <div className={styles.loadMore}>
                 <Button variant="secondary" onClick={handleLoadMore}>
-                  Load more
+                  Більше новин
                 </Button>
               </div>
             )}
           </>
         ) : (
           <EmptyState
-            title="No articles found"
-            text="Try another search query or switch the selected category."
-            actionLabel="Reset filters"
+            title="Пошук не дав результатів"
+            text="Спробуйте іншу категорію або змініть параметри пошуку. Можливо просто стрічка заглючила і новин нема..."
+            actionLabel="Скинути фільтри"
             onAction={resetFilters}
           />
         )}

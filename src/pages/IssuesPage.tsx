@@ -8,6 +8,7 @@ import type { NewspaperIssue } from '@/entities/issue/model/types';
 import { ErrorState } from '@/widgets/states/ErrorState';
 import { LoadingState } from '@/widgets/states/LoadingState';
 import styles from './IssuesPage.module.scss';
+import { EmptyState } from '@/widgets/states/EmptyState';
 
 export function IssuesPage() {
   const [issues, setIssues] = useState<NewspaperIssue[]>([]);
@@ -36,27 +37,31 @@ export function IssuesPage() {
     <div className={styles.page}>
       <Container>
         <div className={styles.head}>
-          <SectionTitle>Newspaper Issues</SectionTitle>
+          <SectionTitle>Останні випуски</SectionTitle>
           <SectionSubtitle>
-            Browse the latest Weazel News editions, magazine-style reports, and special
-            issues.
+            Обирай свій формат: свіжі номери Weazel News, журнальні звіти та ексклюзивні випуски.
           </SectionSubtitle>
         </div>
 
         {isLoading ? (
-          <LoadingState label="Loading issues..." />
+          <LoadingState label="Завантажуємо випуски..." />
         ) : isError ? (
           <ErrorState
-            title="Failed to load issues"
-            text="We could not retrieve the publication archive."
+            title="Помилка завантаження"
+            text="Наразі випуски газет, журналів та інших брошюр недоступний."
             onRetry={loadIssues}
           />
-        ) : (
+        ) : issues.length > 0 ? (
           <div className={styles.grid}>
             {issues.map((issue) => (
               <IssueCard key={issue.id} issue={issue} />
             ))}
           </div>
+        ) : (
+          <EmptyState
+            title="Всі газети знесло вітром... Наразі тут пусто"
+            text="Спробуйте завітати до цього розділу пізніше! Наші редактори працюють не покладаючи рук!"
+          />
         )}
       </Container>
     </div>

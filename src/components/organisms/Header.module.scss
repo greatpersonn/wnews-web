@@ -213,3 +213,29 @@
     border-color: #d9232d;
   }
 }
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userEmail {
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #9ea8b8;
+  font-size: 13px;
+}
+
+.mobileAuth {
+  display: grid;
+  gap: 12px;
+}
+
+.mobileEmail {
+  color: #9ea8b8;
+  font-size: 14px;
+  word-break: break-word;
+}

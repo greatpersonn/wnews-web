@@ -8,8 +8,8 @@ interface ErrorStateProps {
 }
 
 export function ErrorState({
-  title = 'Something went wrong',
-  text = 'Failed to load the requested data.',
+  title = 'Щось пішло не так, як треба...',
+  text = 'Помилка завантаження даних. Спробуйте оновити сторінку або повторити спробу пізніше.',
   onRetry,
 }: ErrorStateProps) {
   return (
@@ -19,7 +19,7 @@ export function ErrorState({
 
       {onRetry && (
         <Button variant="primary" onClick={onRetry}>
-          Retry
+          Спробувати ще раз
         </Button>
       )}
     </div>

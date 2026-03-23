@@ -12,10 +12,10 @@ export function LatestNewsSection({ items }: LatestNewsSectionProps) {
   return (
     <section className={styles.section}>
       <div className={styles.head}>
-        <SectionTitle>Latest News</SectionTitle>
+        <SectionTitle>Останні новини</SectionTitle>
         <SectionSubtitle>
-          The newest stories, public reports, editorials, and breaking updates from the
-          Weazel News desk.
+          Останні історії, публічні звіти, редакційні матеріали та важливі оновлення з
+          редакції Weazel News.
         </SectionSubtitle>
       </div>
 

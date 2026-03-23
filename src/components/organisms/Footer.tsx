@@ -3,9 +3,9 @@ import { Container } from '@/components/atoms/Container';
 import styles from './Footer.module.scss';
 
 const navigation = [
-  { to: '/', label: 'Home' },
-  { to: '/news', label: 'News' },
-  { to: '/issues', label: 'Issues' },
+  { to: '/', label: 'Головна' },
+  { to: '/news', label: 'Новини' },
+  { to: '/issues', label: 'Випуски' },
 ];
 
 export function Footer() {
@@ -19,13 +19,12 @@ export function Footer() {
               <span className={styles.news}>NEWS</span>
             </h2>
             <p className={styles.description}>
-              Digital city news platform with breaking reports, feature stories, magazine
-              issues, and visual publications from Los Santos.
+              Міська онлайн-платформа новин із гарячими репортажами, авторськими статтями, свіжими випусками журналів та яскравими фотографіями з усього Сан-Андреаса.
             </p>
           </div>
 
           <div className={styles.column}>
-            <h3 className={styles.columnTitle}>Navigation</h3>
+            <h3 className={styles.columnTitle}>Навігація</h3>
             <div className={styles.links}>
               {navigation.map((item) => (
                 <Link key={item.to} to={item.to} className={styles.link}>
@@ -36,11 +35,11 @@ export function Footer() {
           </div>
 
           <div className={styles.column}>
-            <h3 className={styles.columnTitle}>Editorial Desk</h3>
+            <h3 className={styles.columnTitle}>Редакція</h3>
             <div className={styles.info}>
-              <span>Daily live updates</span>
-              <span>Special issues and reports</span>
-              <span>City, media, business, lifestyle</span>
+              <span>Щоденні живі оновлення</span>
+              <span>Спеціальні випуски та звіти</span>
+              <span>Місто, медіа, бізнес, стиль життя</span>
             </div>
           </div>
         </div>
